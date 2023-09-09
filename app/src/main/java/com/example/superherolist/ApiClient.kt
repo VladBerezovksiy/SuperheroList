@@ -8,7 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 object ApiClient {
 
     var client = Retrofit.Builder()
-        .baseUrl("https://akabab.github.io/superhero-api/")
+        .baseUrl("https://akabab.github.io/")
         .addConverterFactory(GsonConverterFactory.create())
         .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
         .client(OkHttpClient())

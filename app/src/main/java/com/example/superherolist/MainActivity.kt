@@ -23,8 +23,8 @@ class MainActivity : Activity() {
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({
-                if (it.superhero.isNotEmpty()) {
-                    val superheroes = it.superhero
+                if (it.isNotEmpty()) {
+                    val superheroes = it
                     val myAdapter = SuperheroAdapter(superheroes, {})
                     listView.adapter = myAdapter
                 }
@@ -35,6 +35,5 @@ class MainActivity : Activity() {
     }
 }
 
-data class SuperheroResponse(val superhero: List<Superhero>)
 data class Superhero(val name: String, val images: Images)
 data class Images(val xs: String)

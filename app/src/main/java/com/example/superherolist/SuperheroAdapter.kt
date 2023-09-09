@@ -16,7 +16,7 @@ class SuperheroAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SuperheroViewHolder {
         val listItemViewHolder =
-            LayoutInflater.from(parent.context).inflate(R.layout.list_item_layout, parent, false)
+            LayoutInflater.from(parent.context).inflate(R.layout.superhero_list_layout, parent, false)
         return SuperheroViewHolder(listItemViewHolder)
     }
 
